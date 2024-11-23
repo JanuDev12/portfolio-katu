@@ -1,6 +1,28 @@
 ---
 import Divider from '@components/Divider.astro';
 import Layout from '@layouts/Layout.astro';
+
+
+const StoryBoardsProyects = [
+    {
+        title: "Stranger (thriller)",
+        storyboard: "https://video.wixstatic.com/video/a9013c_2ca45b029a21401ba58394b77609bba3/480p/mp4/file.mp4"
+    },
+    {
+        title: "Trolls Rough Storyboard",
+        storyboard: { src: ["https://video.wixstatic.com/video/ a9013c_1b88e44f99d849098d14dde9d060db26/480p/mp4/file.mp4"]
+        }
+    },
+    {
+        title: "Stranger (pilot)",
+        storyboard: "https://video.wixstatic.com/video/a9013c_2ca45b029a21401ba58394b77609bba3/480p/mp4/file.mp4"
+    },
+    {
+        title: "Karma (horror)",
+        storyboard: "https://video.wixstatic.com/video/a9013c_2ca45b029a21401ba58394b77609bba3/480p/mp4/file.mp4"
+    },
+    
+]
 ---
 
 <Layout title="Welcome to Katu!.">
@@ -12,24 +34,16 @@ import Layout from '@layouts/Layout.astro';
        </div>
        <Divider />
        <div>
-          <div class="StoryboardCard ">
-            <h3 class="text-2xl font-bold mb-4">Stranger</h3>
+        {StoryBoardsProyects.map(project => ( 
+            <div class="StoryboardCard mt-8">
+            <h3 class="text-2xl font-bold mb-4">{project.title}</h3>
             <div class="VideoStoryboard bg-blue-400 w-full h-[430px]">
                <!-- Video Storyboard -->
+               <video src={project.storyboard} controls class="w-full h-full object-cover"></video>
             </div>
           </div>
-          <div class="StoryboardCard mt-4">
-            <h3 class="text-2xl font-bold mb-4">Stranger (pilot)</h3>
-            <div class="VideoStoryboard bg-blue-400 w-full h-[430px]">
-               <!-- Video Storyboard -->
-            </div>
-          </div>
-          <div class="StoryboardCard mt-4">
-            <h3 class="text-2xl font-bold mb-4">Karma (horror)</h3>
-            <div class="VideoStoryboard bg-blue-400 w-full h-[430px]">
-               <!-- Video Storyboard -->
-            </div>
-          </div>
+         ))
+        }
        </div>
 
     </section>
