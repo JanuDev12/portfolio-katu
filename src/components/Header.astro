@@ -1,27 +1,29 @@
-<header class="w-full  flex
-">
-    <nav>
-        <div class="AvatarImage">
-            <img src="https://pbs.twimg.com/media/GSHjbB1WAAA4BVI?format=jpg&name=large" alt="Katu" class="size-32 rounded-full">
-            <span>Katu</span>
-        </div>
+---
 
-        <ul class="flex ">
+
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+
+import  AvatarIcon  from "@components/AvatarIcon"
+import StoryboardsAccordion from "@/components/StoryboardsAccordion"
+---
+
+<header>
+    <nav class="w-full">
+        <AvatarIcon client:load/>
+        <ul class="mt-6 flex flex-col gap-2 flex-wrap">
             <li>
-                Acerca de mi
+                <StoryboardsAccordion client:load/>
             </li>
             <li>
-                Storyboard
+                <a href="#">Sketchbook</a>
             </li>
             <li>
-                Password
+                <a href="#">About Me</a>
             </li>
             <li>
-                Contacto
-            </li>
-            <li>
-                Contacto
-            </li>
+                <a href="#">Contact me</a>
+                
+            </li>     
         </ul>
     </nav>
 </header>

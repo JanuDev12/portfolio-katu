@@ -7,6 +7,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import '@/styles/globals.css'
 ---
 
 <!doctype html>
@@ -21,15 +23,12 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<div class="wrapper p-[50px] ">
-			<div class="nav fixed max-w-[80px]">
+			<div class="nav fixed max-w-[250px] h-[720px] flex flex-col ">
 				<Header />
 				<Footer />
-				<ul>
-					<li>adasdyasdghyasdghyasdghyuadghyasudg</li>
-				</ul>
 			</div>
 
-		<main class="ml-[380px] w-auto">
+		<main class="ml-[300px] w-auto">
 			<slot />
 		</main>
 		
