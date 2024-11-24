@@ -27,21 +27,22 @@ const StoryBoardsProyects = [
 
 <Layout title="Welcome to Katu!.">
 
-    <section class="py-10 px-16">
+    <section class="">
        <div>
-          <h3 class="text-2xl font-bold mb-4">PERSONAL STORYBOARDS</h3>
-          <p>Here are some of my personal Storyboards, some of them are exercises from college, and others like Stranger are personal projects.</p>
+          <h3 class="text-2xl font-bold mb-5">PERSONAL STORYBOARDS</h3>
+          <p class="text-sm tracking-wide text-[#666]">Here are some of my personal Storyboards, some of them are exercises from college, and others like Stranger are personal projects.</p>
        </div>
        <Divider />
        <div>
         {StoryBoardsProyects.map(project => ( 
-            <div class="StoryboardCard mt-8">
+            <div class="StoryboardCard pb-16">
             <h3 class="text-2xl font-bold mb-4">{project.title}</h3>
             <div class="VideoStoryboard bg-blue-400 w-full ">
                <!-- Video Storyboard -->
                <video src={project.storyboard} controls class="w-full h-full object-cover"></video>
             </div>
           </div>
+           <Divider />
          ))
         }
        </div>
