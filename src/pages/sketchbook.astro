@@ -1,23 +1,26 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import Divider from "@/components/Divider.astro"
 ---
 
 <Layout title="Welcome to Katu!.">
     <section>
         <h3 class="text-2xl font-bold mb-5">Backgrounds</h3>
-        <div class="grid-cols-2 grid gap-4 h-full">
-            <div class="size-96 bg-slate-500">
-
+        <div class="grid grid-cols-2  gap-2 h-full">
+            <div class="h-auto max-w-full bg-slate-500">
+                <img src="https://images.squarespace-cdn.com/content/v1/5958864537c581354bb2b89e/1665519759048-VOY95PGBOU544G5C608N/PillowTalk.png?format=2500w" alt="">
             </div>
-             <div class="size-96 bg-slate-500">
-
+             <div class="h-auto max-w-full bg-slate-500">
+                 <img src="https://images.squarespace-cdn.com/content/v1/5958864537c581354bb2b89e/1665094062386-2WRS3ZYD5YD4FDKXQO7S/LoganJeanScott_portrait.png?format=2500w" alt="">
             </div>
-            <div class="size-96 bg-slate-500">
-
+            <div class="h-auto max-w-full bg-slate-500">
+                 <img src="https://images.squarespace-cdn.com/content/v1/5958864537c581354bb2b89e/1665094061641-HPGQDNWKFHY2B91DOD9A/RogueGambit_Chere.png?format=2500w" alt="">
             </div>
-             <div class="size-96 bg-slate-500">
-
+             <div class="h-auto max-w-full bg-slate-500">
+                 <img src="https://images.squarespace-cdn.com/content/v1/5958864537c581354bb2b89e/1665608969802-3M58DE4N7YLDCWM7FCWQ/Jubilee_Cyberpunk.png?format=2500w" alt="">
             </div>
         </div>
+        <Divider />
+        <h3 class="text-2xl font-bold mb-5">Illustrations</h3>
     </section>
 </Layout>
