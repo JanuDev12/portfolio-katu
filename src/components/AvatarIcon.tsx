@@ -12,7 +12,7 @@ function AvatarIcon() {
         <AvatarFallback>KT</AvatarFallback>
       </Avatar>
       <div className="mt-2 ">
-        <span className="text-3xl font-light">Val Katu</span>
+        <span className="text-3xl font-semibold leading-loose uppercase">Val Katu</span>
       </div>
     </>
   );
