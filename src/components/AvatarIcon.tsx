@@ -11,8 +11,8 @@ function AvatarIcon() {
         />
         <AvatarFallback>KT</AvatarFallback>
       </Avatar>
-      <div className="mt-2 ">
-        <span className="text-3xl font-semibold leading-loose uppercase">Val Katu</span>
+      <div className="mt-2">
+        <span className="text-3xl font-thin text-red-700 leading-loose uppercase font-geist ">Katu Kint</span>
       </div>
     </>
   );

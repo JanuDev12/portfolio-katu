@@ -5,7 +5,7 @@ import Layout from '@layouts/Layout.astro';
 
 const StoryBoardsProyects = [
     {
-        title: "Stranger (thriller)",
+        title: "STRANGER - thriller",
         storyboard: "https://video.wixstatic.com/video/a9013c_2ca45b029a21401ba58394b77609bba3/480p/mp4/file.mp4"
     },
     {
@@ -29,14 +29,14 @@ const StoryBoardsProyects = [
 
     <section class="">
        <div>
-          <h3 class="text-2xl font-bold mb-5">PERSONAL STORYBOARDS</h3>
+          <h3 class="text-2xl font-bold mb-5 font-geist">PERSONAL STORYBOARDS</h3>
           <p class="text-sm tracking-wide text-[#666] font-onest">Here are some of my personal Storyboards, some of them are exercises from college, and others like Stranger are personal projects.</p>
        </div>
        <Divider />
        <div>
         {StoryBoardsProyects.map(project => ( 
             <div class="StoryboardCard pb-16">
-            <h3 class="text-2xl font-bold mb-4">{project.title}</h3>
+            <h3 class="text-2xl font-bold mb-4 font-geist">{project.title}</h3>
             <div class="VideoStoryboard bg-blue-400 w-full ">
                <video src={project.storyboard} controls class="w-full h-full object-cover"></video>
             </div>
