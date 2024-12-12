@@ -12,6 +12,7 @@ interface Props {
 const { title } = Astro.props;
 
 import '@/styles/globals.css'
+import Divider from '@/components/Divider.astro';
 ---
 
 <!doctype html>
@@ -26,28 +27,41 @@ import '@/styles/globals.css'
 	</head>
 	<body>
 		
-		<div class="fixed top-0 z-[-2] h-screen w-screen bg-[#101014]"></div>
+		<!-- BACKGROUND COLOR -->
+		<div class="fixed top-0 z-[-2] h-screen w-screen bg-[#141414]"></div>
 
 
-		<div class="wrapper py-[50px] pl-[200px] pr-[200px]">
-			<div class=" fixed max-w-[250px] h-[720px] flex flex-col ">
-				<Header />
-				<Footer />
-			</div>
+		<!-- CONTENT -->
+		<div class="py-[75px] px-[200px] flex flex-col h-screen">
 
-		<main class="ml-[200px] w-auto py-12 px-16 ">
-			<slot />
-		</main>
+			<!-- HEADER -->
+		    	<div class="w-full ">
+
+					<div class="w-full text-center flex flex-col ">
+						<h2 class="text-5xl font-thin text-red-700 leading-normal uppercase font-geist">KATU MEDRANO</h2>
+						<span class="text-sm">Storyboard Artist</span>
+						<div class="bg-[#bbb] w-full h-[1.3px] mb-4 mt-4"></div>
+					</div>
+
+					<nav >
+						<a href="#">About me</a>
+						<a href="#">Storyboard</a>
+						<a href="#">Merch art</a>
+						<a href="#">Password</a>
+						<a href="#">Contacto</a>
+					</nav>
+		     	</div>
+
+	        	<main class="w-auto h-full">
+			       <slot />
+	        	</main>
 		
 		</div>
+
 	</body>
 </html>
 <style is:global>
 	/* body {
 		font-family: 'Onest Variable', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
 	} */
-
-	 body {
-		color: #e7e7e7;
-	 }
 </style>

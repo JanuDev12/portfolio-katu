@@ -3,30 +3,11 @@ import Divider from '@components/Divider.astro';
 import Layout from '@layouts/Layout.astro';
 
 
-const StoryBoardsProyects = [
-    {
-        title: "STRANGER - thriller",
-        storyboard: "https://video.wixstatic.com/video/a9013c_2ca45b029a21401ba58394b77609bba3/480p/mp4/file.mp4"
-    },
-    {
-        title: "Trolls Rough Storyboard",
-        storyboard: { src: ["https://video.wixstatic.com/video/ a9013c_1b88e44f99d849098d14dde9d060db26/480p/mp4/file.mp4"]
-        }
-    },
-    {
-        title: "Stranger (pilot)",
-        storyboard: "https://video.wixstatic.com/video/a9013c_2ca45b029a21401ba58394b77609bba3/480p/mp4/file.mp4"
-    },
-    {
-        title: "Karma (horror)",
-        storyboard: "https://video.wixstatic.com/video/a9013c_2ca45b029a21401ba58394b77609bba3/480p/mp4/file.mp4"
-    },
-    
-]
+import storyboards from '../data/storyboards'
 ---
 
-<Layout title="Welcome to Katu!.">
-
+<!-- <Layout title="Welcome to Katu!.">
+ -->
     <section class="">
        <div>
           <h3 class="text-2xl font-bold mb-5 font-geist">PERSONAL STORYBOARDS</h3>
@@ -34,7 +15,7 @@ const StoryBoardsProyects = [
        </div>
        <Divider />
        <div>
-        {StoryBoardsProyects.map(project => ( 
+        {storyboards.map(project => ( 
             <div class="StoryboardCard pb-16">
             <h3 class="text-2xl font-bold mb-4 font-geist">{project.title}</h3>
             <div class="VideoStoryboard bg-blue-400 w-full ">
@@ -51,4 +32,5 @@ const StoryBoardsProyects = [
    
     
 	
-</Layout>
+<!-- </Layout>
+ -->
