@@ -7,9 +7,22 @@ import Divider from "@/components/Divider.astro";
 
 <Layout title="Welcome to Katu!.">
     <section>
+
+        <div class="flex justify-between ">
+            <div class="text-sm tracking-wide font-semibold">
+                <p>Outside of the industry I have also made merch art either</p>
+                <p>for voice actors or for my own shop at artist alleys.</p>
+
+            </div>
+            <div>
+                <!-- <img src="https://static.wixstatic.com/media/a9013c_2224c6e40ee54e81abc77327c5cde571~mv2.png/v1/fill/w_389,h_546,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_2224c6e40ee54e81abc77327c5cde571~mv2.png" alt=""> -->
+                 <div class="w-[600px] h-40 bg-yellow-300"></div>
+            </div>
+
+        </div>
        
 
-        <div class="">
+        <div class="mt-8">
             <h3 class="text-2xl font-bold mb-4 font-proxima uppercase">Prints</h3>
             <div class="grid grid-cols-2 md:grid-cols-3 ">
                 {merchPrints.map(print => ( 
