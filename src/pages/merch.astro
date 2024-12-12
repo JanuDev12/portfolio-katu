@@ -1,0 +1,24 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import backgrounds from "@/data/backgrounds";
+import merchPrints from "@/data/merch";
+---
+
+<Layout title="Welcome to Katu!.">
+    <section>
+       
+
+        <div class="">
+            <h3 class="text-2xl font-bold mb-4 font-proxima uppercase">Prints</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 ">
+                {merchPrints.map(print => ( 
+                    <div class="h-auto max-w-full ">
+                        <img class="" src={print.src} alt="">
+                    </div>
+                ))}
+                
+            </div>
+       </div>
+        
+    </section>
+</Layout>
