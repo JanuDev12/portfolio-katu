@@ -63,4 +63,34 @@
   body {
     @apply bg-background text-foreground;
   }
+
+ @font-face {
+    font-family: 'Proxima Nova';
+    src: url('/fonts/proxima-nova/proximanova_regular.ttf') format('truetype'),
+         url('/fonts/proxima-nova/proximanova_regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('/fonts/proxima-nova/proximanova_bold.ttf') format('truetype'),
+         url('/fonts/proxima-nova/proximanova_bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('/fonts/proxima-nova/proximanova_light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('/fonts/proxima-nova/proximanova_extrabold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
 }

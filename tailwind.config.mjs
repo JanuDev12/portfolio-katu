@@ -6,6 +6,7 @@ export default {
     fontFamily: {
       onest: ['"Onest Variable"', "sans-serif"],
       geist: ['"Geist Sans"', "sans-serif"],
+      proxima: ['"Proxima Nova"', "sans-serif"],
     },
     extend: {
       borderRadius: {
