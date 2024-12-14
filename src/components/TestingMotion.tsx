@@ -4,8 +4,8 @@ import { motion } from "motion/react";
 
 export function TestingMotion() {
   const FADE_DOWN_ANIMATION_VARIANTS = {
-    hidden: { opacity: 0, x: -10 },
-    show: { opacity: 1, x: 0, transition: { type: "spring" } },
+    hidden: { opacity: 0, y: 10 },
+    show: { opacity: 1, y: 0, transition: { type: "spring" } },
   };
   return (
     <motion.div

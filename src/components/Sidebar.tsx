@@ -6,9 +6,13 @@ import { motion } from "motion/react";
 function Sidebar() {
 
    const FADE_DOWN_ANIMATION_VARIANTS = {
-      hidden: { opacity: 0, x: -10 },
-      show: { opacity: 1, x: 0, transition: { type: "spring" } },
-    };
+     hidden: { opacity: 0, x: -10 },
+     show: {
+       opacity: 1,
+       x: 0,
+       transition: { type: "spring", duration: 1.25 },
+     },
+   };
 
   return (
     <motion.div
@@ -30,19 +34,19 @@ function Sidebar() {
         <AvatarIcon />
         <nav className="w-full text-neutral-600">
           <ul className="text-[14.8px] leading-[22px] flex flex-col gap-2 mt-10 font-medium tracking-tight">
-            <li className="">
+            <li className="hover:text-red-400 hover:tracking-wide transition-all duration-300">
               <a href="">storyboard portfolio</a>
             </li>
-            <li className="">
+            <li className="hover:text-red-400 hover:tracking-wide transition-all  duration-300">
               <a href="">password</a>
             </li>
-            <li>
+            <li className="hover:text-red-400 hover:tracking-wide transition-all duration-300">
               <a href="">backgrounds</a>
             </li>
-            <li>
+            <li className="hover:text-red-400 hover:tracking-wide transition-all duration-300">
               <a href="">merch art</a>
             </li>
-            <li>
+            <li className="hover:text-red-400 hover:tracking-wide transition-all duration-300">
               <a href="">about me</a>
             </li>
           </ul>
