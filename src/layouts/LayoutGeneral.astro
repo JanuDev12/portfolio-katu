@@ -12,7 +12,9 @@ interface Props {
 const { title } = Astro.props;
 
 import '@/styles/globals.css'
-import AvatarIcon from '@/components/AvatarIcon';
+import Sidebar from '@/components/Sidebar';
+
+import TestingMotion from '@/components/TestingMotion'
 ---
 
 <!doctype html>
@@ -30,10 +32,10 @@ import AvatarIcon from '@/components/AvatarIcon';
         <!-- BACKGROUND -->
 		<div class="fixed top-0 z-[-2] h-screen w-screen bg-[#f4f4f6]"></div>
 
-		<div class="wrapper h-screen">
+		<div class="wrapper h-screen flex">
 
             <!-- SIDEBAR -->
-             <aside class="p-[50px] h-full max-w-[270px] flex flex-col ">
+            <!--  <aside class="p-[50px] h-full max-w-[270px] flex flex-col sidebar">
                 <AvatarIcon client:load/>
                 <nav class="w-full text-neutral-600">
                     <ul class="text-[14.8px] leading-[22px] flex flex-col gap-2 mt-10 font-medium tracking-tight">
@@ -75,8 +77,13 @@ import AvatarIcon from '@/components/AvatarIcon';
                      <span class="text-xs">Created for [me]</span>
                 </div>
                 
-             </aside>
-	        <main class="ml-[200px] w-auto py-2 px-16 ">
+             </aside> -->
+	        
+            <Sidebar client:load />
+
+             <main class=" w-auto py-2 px-16 ">
+
+                <TestingMotion client:load></TestingMotion>
 
                 <!-- SOCIALS -->
                 <div>
@@ -95,3 +102,4 @@ import AvatarIcon from '@/components/AvatarIcon';
 		font-family: 'Onest Variable', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
 	} */
 </style>
+
