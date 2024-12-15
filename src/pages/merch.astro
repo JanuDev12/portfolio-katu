@@ -11,16 +11,24 @@ import LayoutGeneral from '@/layouts/LayoutGeneral.astro';
 <LayoutGeneral title="Welcome to Katu!.">
     <section class="overflow-y-auto no-scroll pt-8">
         
-
-        <div class="flex justify-between ">
-            <div class="text-sm tracking-wide font-semibold">
-                <p>Outside of the industry I have also made merch art either</p>
+        <h3 class="text-xl font-semibold uppercase tracking-wide font-proxima ">Merch</h3>
+		<div class="w-[6.5%] h-[2px] bg-red-500 rounded"></div>
+        <div class="flex justify-between mt-4">
+            <div class=" font-proxima font-semibold flex flex-col">
+                <p class="">Outside of the industry I have also made merch art either</p>
                 <p>for voice actors or for my own shop at artist alleys.</p>
-
+                <div class="mt-auto ">
+                    <span >The name of my shop is: El Ramen de Katu</span>
+                    <ul class="text-sm">
+                        <li>- Prints</li>
+                        <li>- Stickers</li>
+                        <li class="italic">- And more</li>
+                    </ul>
+                </div>
             </div>
             <div>
                 <!-- <img src="https://static.wixstatic.com/media/a9013c_2224c6e40ee54e81abc77327c5cde571~mv2.png/v1/fill/w_389,h_546,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_2224c6e40ee54e81abc77327c5cde571~mv2.png" alt=""> -->
-                 <div class="w-[600px] h-40 p-8 flex items-center justify-center font-proxima border-yellow-400 border-2 rounded text-yellow-400">
+                 <div class="w-[660px] h-40 p-8 flex items-center justify-center font-proxima border-red-400 border-2 rounded text-red-400">
                     <span class="uppercase text-5xl tracking-widest">El ramen de katu</span>
                  </div>
             </div>
@@ -29,7 +37,7 @@ import LayoutGeneral from '@/layouts/LayoutGeneral.astro';
        
 
         <div class="mt-8">
-            <h3 class="text-2xl font-bold mb-4 font-proxima uppercase">Prints</h3>
+            <h3 class="text-2xl font-bold mb-2 font-proxima uppercase">Prints</h3>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {merchPrints.map(print => ( 
                     <div class="h-auto max-w-full ">

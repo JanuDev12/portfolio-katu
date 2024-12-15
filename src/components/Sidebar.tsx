@@ -47,7 +47,7 @@ function Sidebar() {
               <a href="merch">merch art</a>
             </li>
             <li className="hover:text-red-400 hover:tracking-wide transition-all duration-300">
-              <a href="">about me</a>
+              <a href="about">about me</a>
             </li>
           </ul>
         </nav>

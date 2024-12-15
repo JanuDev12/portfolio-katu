@@ -15,7 +15,7 @@ function RightLogo() {
 
   return (
     <motion.div
-      className="size-[65px] mt-4 relative"
+      className="w-[65px] h-[780px] mt-4 relative"
       initial="hidden"
       animate="show"
       variants={{
@@ -47,6 +47,9 @@ function RightLogo() {
           <span>Karma</span>
         </li>
       </ul>
+      <div className='size-10 bg-slate-200 rounded-xl absolute bottom-0 ml-4'>
+        
+      </div>
     </motion.div>
   );
 }
