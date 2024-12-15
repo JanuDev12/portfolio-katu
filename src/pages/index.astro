@@ -17,10 +17,10 @@ import { Sparkles } from '@/components/ui/sparkles';
 </SecondLayout> -->
 
 <LayoutGeneral title='Welcome to Katu'>
-	<div class="w-full h-[70%] flex flex-col justify-between pt-8 ">
+	<div class="w-full h-full flex flex-col justify-between pt-8 overflow-y-auto no-scroll">
 
 		
-		<div class="flex flex-col relative ">
+		<div class="flex flex-col relative mb-[220px]">
 			<h3 class="text-xl font-semibold uppercase tracking-wide font-proxima ">Personal Storyboards</h3>
 			<div class="w-[23%] h-[2px] bg-red-500 rounded"></div>
 			<div class="font-proxima font-semibold leading-loose mt-12 flex flex-col text-center">
@@ -79,6 +79,6 @@ import { Sparkles } from '@/components/ui/sparkles';
 		</div>
 
 		<!-- VIDEO STORYBOARD -->
-		<!-- <StoryboardVideo client:load /> -->
+		<StoryboardVideo client:load />
 	</div>
 </LayoutGeneral>

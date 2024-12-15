@@ -10,7 +10,7 @@ function StoryboardVideo() {
 
   return (
     <motion.div
-      className="mt-auto pb-8 w-full "
+      className="mt-48 mb-28 w-full "
       initial="hidden"
       animate="show"
       viewport={{ once: true }}
@@ -23,6 +23,11 @@ function StoryboardVideo() {
         },
       }}
     >
+      <h3 className="text-xl font-semibold uppercase tracking-wide font-proxima text-center">
+        Pilot
+      </h3>
+      <div className="w-[6%] h-[2px] bg-red-500 rounded mb-4 mx-auto"></div>
+
       <motion.video
         variants={FADE_DOWN_ANIMATION_VARIANTS}
         src="https://video.wixstatic.com/video/a9013c_2ca45b029a21401ba58394b77609bba3/480p/mp4/file.mp4"
