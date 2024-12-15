@@ -2,11 +2,14 @@
 import Layout from "@/layouts/Layout.astro";
 import Divider from "@/components/Divider.astro"
 import backgrounds from "@/data/backgrounds";
+import LayoutGeneral from '@/layouts/LayoutGeneral.astro';
+
+
 ---
 
-<Layout title="Welcome to Katu!.">
-    <section>
-        <p class="text-sm tracking-wider mb-3 ">Also i make backgrounds!!</p>
+<LayoutGeneral title="Welcome to Katu!.">
+    <section class="overflow-y-auto scroll-smooth no-scroll pt-4">
+        <p class="text-sm tracking-wider mb-3 font-medium">Also i make backgrounds!!</p>
         
         <div class="grid grid-cols-2  gap-2 h-full">
             {backgrounds.map(image => (
@@ -19,4 +22,4 @@ import backgrounds from "@/data/backgrounds";
         </div>
         
     </section>
-</Layout>
+</LayoutGeneral>

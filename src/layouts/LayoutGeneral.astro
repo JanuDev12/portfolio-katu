@@ -12,9 +12,11 @@ interface Props {
 const { title } = Astro.props;
 
 import '@/styles/globals.css'
+import '@/styles/scroll.css'
 import Sidebar from '@/components/Sidebar';
 
 import TestingMotion from '@/components/TestingMotion'
+import RightLogo from '@/components/RightLogo';
 ---
 
 <!doctype html>
@@ -81,17 +83,15 @@ import TestingMotion from '@/components/TestingMotion'
 	        
             <Sidebar client:load />
 
-             <main class=" w-auto py-2 px-16 ">
-
-                <TestingMotion client:load></TestingMotion>
-
-                <!-- RIGHT LOGO -->
-                <div>
-
-                </div>
+             <main class="w-full flex gap-6 justify-between px-4">
 
                 <!-- CONTENT -->
 			   <slot />
+
+               <!-- RIGHT LOGO -->
+                <div >
+                   <RightLogo client:load />
+                </div>
 		   </main>
 		
 		</div>

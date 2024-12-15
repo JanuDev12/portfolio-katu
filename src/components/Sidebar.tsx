@@ -28,20 +28,20 @@ function Sidebar() {
       }}
     >
       <motion.aside
-        className="p-[50px] h-full max-w-[270px] flex flex-col sidebar"
+        className="p-[50px] h-full w-[270px] flex flex-col sidebar"
         variants={FADE_DOWN_ANIMATION_VARIANTS}
       >
         <AvatarIcon />
         <nav className="w-full text-neutral-600">
           <ul className="text-[14.8px] leading-[22px] flex flex-col gap-2 mt-10 font-medium tracking-tight">
             <li className="hover:text-red-400 hover:tracking-wide transition-all duration-300">
-              <a href="">storyboard portfolio</a>
+              <a href="/">storyboard portfolio</a>
             </li>
             <li className="hover:text-red-400 hover:tracking-wide transition-all  duration-300">
               <a href="">password</a>
             </li>
             <li className="hover:text-red-400 hover:tracking-wide transition-all duration-300">
-              <a href="">backgrounds</a>
+              <a href="sketchbook">backgrounds</a>
             </li>
             <li className="hover:text-red-400 hover:tracking-wide transition-all duration-300">
               <a href="">merch art</a>

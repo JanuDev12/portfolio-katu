@@ -3,6 +3,8 @@ import SecondLayout from '@/layouts/SecondLayout.astro';
 import Layout from '@layouts/Layout.astro';
 import Storyboards from './storyboards.astro';
 import LayoutGeneral from '@/layouts/LayoutGeneral.astro';
+import StoryboardVideo from '@/components/StoryboardVideo';
+
 ---
 
 <!-- <Layout title="Welcome to Katu!.">
@@ -14,5 +16,8 @@ import LayoutGeneral from '@/layouts/LayoutGeneral.astro';
 </SecondLayout> -->
 
 <LayoutGeneral title='Welcome to Katu'>
-
+	<div class="w-full h-full flex ">
+		<!-- VIDEO STORYBOARD -->
+		<StoryboardVideo client:load />
+	</div>
 </LayoutGeneral>
