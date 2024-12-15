@@ -16,8 +16,34 @@ import StoryboardVideo from '@/components/StoryboardVideo';
 </SecondLayout> -->
 
 <LayoutGeneral title='Welcome to Katu'>
-	<div class="w-full h-full flex ">
+	<div class="w-full h-[70%] flex flex-col justify-between pt-4 font-proxima">
+
+		
+		<div class="">
+			<h1>Hola Mundo</h1>
+		</div>
+		<div class="flex gap-4 h-64">
+			<div class="flex flex-col gap-1">
+				<h4 class="text-4xl">Titulo</h4>
+				<p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit deserunt praesentium atque consectetur, quis ipsa qui accusantium totam temporibus mollitia tempore amet necessitatibus nemo nihil quisquam maiores fuga est facilis.</p>
+				<div class="flex flex-wrap gap-2 mt-4">
+					<div class="w-[120px] h-[70px] bg-red-300"></div>
+					<div class="w-[120px] h-[70px] bg-red-300"></div>
+					<div class="w-[120px] h-[70px] bg-red-300"></div>
+					<div class="w-[120px] h-[70px] bg-red-300"></div>
+					<div class="w-[120px] h-[70px] bg-red-300"></div>
+					
+				</div>
+			</div>
+
+			<div>
+				<div class="w-[600px] h-full bg-red-200">
+
+				</div>
+			</div>
+		</div>
+
 		<!-- VIDEO STORYBOARD -->
-		<StoryboardVideo client:load />
+		<!-- <StoryboardVideo client:load /> -->
 	</div>
 </LayoutGeneral>

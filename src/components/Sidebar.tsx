@@ -44,7 +44,7 @@ function Sidebar() {
               <a href="sketchbook">backgrounds</a>
             </li>
             <li className="hover:text-red-400 hover:tracking-wide transition-all duration-300">
-              <a href="">merch art</a>
+              <a href="merch">merch art</a>
             </li>
             <li className="hover:text-red-400 hover:tracking-wide transition-all duration-300">
               <a href="">about me</a>

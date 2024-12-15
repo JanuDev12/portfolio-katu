@@ -3,12 +3,14 @@ import Layout from "@/layouts/Layout.astro";
 import backgrounds from "@/data/backgrounds";
 import merchPrints from "@/data/merch";
 import Divider from "@/components/Divider.astro";
+
+import LayoutGeneral from '@/layouts/LayoutGeneral.astro';
+
 ---
 
 <LayoutGeneral title="Welcome to Katu!.">
-    <section>
-        <div class="bg-[#bbb] w-full h-[1.8px] mb-6  ">
-</div>
+    <section class="overflow-y-auto no-scroll pt-8">
+        
 
         <div class="flex justify-between ">
             <div class="text-sm tracking-wide font-semibold">
@@ -28,7 +30,7 @@ import Divider from "@/components/Divider.astro";
 
         <div class="mt-8">
             <h3 class="text-2xl font-bold mb-4 font-proxima uppercase">Prints</h3>
-            <div class="grid grid-cols-2 md:grid-cols-3 ">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {merchPrints.map(print => ( 
                     <div class="h-auto max-w-full ">
                         <img class="" src={print.src} alt="">
