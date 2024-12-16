@@ -29,7 +29,7 @@ function RightLogo() {
     >
       <motion.img
         variants={FADE_DOWN_ANIMATION_VARIANTS}
-        className="w-full h-auto object-cover"
+        className="w-full h-auto object-contain"
         src="https://static.wixstatic.com/media/a9013c_35c12ae789e645d4a8611bd9faa22e8c~mv2.png/v1/fill/w_233,h_289,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/FIRMA%20PODEROSA.png"
         alt=""
       />

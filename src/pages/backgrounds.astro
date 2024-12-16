@@ -4,17 +4,17 @@ import backgrounds from "@/data/backgrounds";
 ---
 
 <Layout title="Welcome to Katu!.">
-    <section class="overflow-y-auto no-scroll pt-4">
+    <section class="overflow-y-auto no-scroll pt-4 pb-12 w-full h-full">
         <p class="text-sm tracking-wider mb-3 font-medium">Also i make backgrounds!!</p>
         
-        <div class="grid grid-cols-2  gap-2 h-full">
+        <div class="grid grid-cols-2 gap-2">
+
             {backgrounds.map(image => (
-                <div class="h-auto max-w-full ">
-                <img src={image.src} alt="">
-              </div>
-            ))  
-            }
-        
+                <div class="h-full w-full">
+                    <img class="w-full h-full object-cover" src={image.src} alt={image.id.toString()} />
+                </div>
+            ))}
+            
         </div>
         
     </section>

@@ -4,11 +4,17 @@ import merchPrints from "@/data/merch";
 ---
 
 <Layout title="Welcome to Katu!.">
-    <section class="overflow-y-auto no-scroll pt-8">
-        
+
+    <section class="overflow-y-auto no-scroll pt-8 w-full h-full">
+
+        <!-- TITLE -->
         <h3 class="text-xl font-semibold uppercase tracking-wide font-proxima ">Merch</h3>
 		<div class="w-[6.5%] h-[2px] bg-red-500 rounded"></div>
+         
+
         <div class="flex justify-between mt-4">
+            
+            <!-- TEXT -->
             <div class=" font-proxima font-semibold flex flex-col">
                 <p class="">Outside of the industry I have also made merch art either</p>
                 <p>for voice actors or for my own shop at artist alleys.</p>
@@ -21,8 +27,9 @@ import merchPrints from "@/data/merch";
                     </ul>
                 </div>
             </div>
+
+            <!-- BANNER -->
             <div>
-                <!-- <img src="https://static.wixstatic.com/media/a9013c_2224c6e40ee54e81abc77327c5cde571~mv2.png/v1/fill/w_389,h_546,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_2224c6e40ee54e81abc77327c5cde571~mv2.png" alt=""> -->
                  <div class="w-[660px] h-40 p-8 flex items-center justify-center font-proxima border-red-400 border-2 rounded text-red-400">
                     <span class="uppercase text-5xl tracking-widest">El ramen de katu</span>
                  </div>
@@ -35,33 +42,33 @@ import merchPrints from "@/data/merch";
             <h3 class="text-2xl font-bold mb-2 font-proxima uppercase">Prints</h3>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {merchPrints.map(print => ( 
-                    <div class="h-auto max-w-full ">
-                        <img class="" src={print.src} alt="">
+                     <div class="h-auto max-w-full">
+                        <img class="" src={print.src} alt={print.id.toString()} />
                     </div>
-                  ))
-                }
-                
+                ))}
             </div>
        </div>
+
+
        <div>
-        <h3 class="text-2xl font-bold mt-6 mb-4 font-proxima uppercase">Stickers</h3>
-        <div>
+         <h3 class="text-2xl font-bold mt-6 mb-4 font-proxima uppercase">Stickers</h3>
+         <div>
             <img src="https://static.wixstatic.com/media/a9013c_4f289f86d6884295a629461012d5d66e~mv2.png/v1/fill/w_1225,h_800,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_4f289f86d6884295a629461012d5d66e~mv2.png" alt="">
-        </div>
+         </div>
        </div>
 
        <div>
-        <h3 class="text-2xl font-bold mt-6 mb-4 font-proxima uppercase">T-shirts & notebooks</h3>
-        <div>
+         <h3 class="text-2xl font-bold mt-6 mb-4 font-proxima uppercase">T-shirts & notebooks</h3>
+         <div>
             <img src="https://static.wixstatic.com/media/a9013c_08cfc9079a57495eaa42e96b9f225598~mv2.jpeg/v1/fill/w_943,h_713,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_08cfc9079a57495eaa42e96b9f225598~mv2.jpeg" alt="">
-        </div>
+         </div>
        </div>
 
        <div>
-        <h3 class="text-2xl font-bold mt-6 mb-4 font-proxima uppercase">The stand</h3>
-        <div>
-            <img src="https://static.wixstatic.com/media/a9013c_d358e86f247541c8bc9dcde59e3fdbe2~mv2.jpeg/v1/fill/w_696,h_588,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_d358e86f247541c8bc9dcde59e3fdbe2~mv2.jpeg" alt="">
-        </div>
+         <h3 class="text-2xl font-bold mt-6 mb-4 font-proxima uppercase">The stand</h3>
+         <div>
+             <img src="https://static.wixstatic.com/media/a9013c_d358e86f247541c8bc9dcde59e3fdbe2~mv2.jpeg/v1/fill/w_696,h_588,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_d358e86f247541c8bc9dcde59e3fdbe2~mv2.jpeg" alt="">
+         </div>
        </div>
         
     </section>

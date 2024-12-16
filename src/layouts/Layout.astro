@@ -17,6 +17,10 @@ const { title } = Astro.props;
 interface Props {
 	title: string;
 }
+
+//Data
+import sidebarLinks from '@/data/sidebarLinks'
+
 ---
 
 <!doctype html>
@@ -37,27 +41,15 @@ interface Props {
         <!-- WRAPPER -->
 		<div class="h-screen flex">
 
-            <!--  METHOD 1:
-            <Sidebar client:idle>
-               <SidebarAvatar avatar="/">
-
-               <SidebarLinks link=""> storyboard portfolio <SidebarLink />
-               <SidebarLinks link=""> password <SidebarLink />
-               <SidebarLinks link=""> backgrounds <SidebarLink />
-               <SidebarLinks link=""> merch art <SidebarLink />
-               <SidebarLinks link=""> about me <SidebarLink />
-            <Sidebar />
-            -->
-
-            <!-- METHOD 2:
-             <Sidebar client:idle avatar="/avatar.jpg" links={dataLink} />
-            -->
-
             <!-- SIDEBAR -->
-            <Sidebar client:idle />
+            <Sidebar 
+              client:idle 
+              avatar="https://pbs.twimg.com/media/GSHjbB1WAAA4BVI?format=jpg&name=large"
+              links={sidebarLinks}
+              />
             
 
-            <main class="w-full flex gap-6 justify-between px-4">
+            <main class="w-full flex gap-6 px-4">
 
                 <!-- CONTENT -->
 			    <slot />

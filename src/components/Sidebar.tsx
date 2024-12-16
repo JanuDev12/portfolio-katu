@@ -1,9 +1,17 @@
-import React from 'react'
-import AvatarIcon from './AvatarIcon';
-
 import { motion } from "motion/react";
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 
-function Sidebar() {
+interface LinkItem {
+  link: string;
+  name: string;
+}
+
+interface SidebarProps {
+  avatar: string;
+  links: LinkItem[];
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ avatar, links }) => {
 
    const FADE_DOWN_ANIMATION_VARIANTS = {
      hidden: { opacity: 0, x: -10 },
@@ -28,31 +36,45 @@ function Sidebar() {
       }}
     >
       <motion.aside
-        className="p-[50px] h-full w-[270px] flex flex-col sidebar"
+        className="p-[50px] h-full w-[270px] flex flex-col"
         variants={FADE_DOWN_ANIMATION_VARIANTS}
       >
-        <AvatarIcon />
+        
+        {/* --- AVATAR ICON --- */}
+        <div>
+          <Avatar className="size-[70px] ">
+            <AvatarImage
+              src={avatar}
+              alt="Katu"
+            />
+            <AvatarFallback>KT</AvatarFallback>
+          </Avatar>
+          <div className="mt-3 flex flex-col font-proxima ">
+            <span className="text-2xl font-semibold text-black tracking-wide">
+              Katu
+            </span>
+            <span className="text-sm font-semibold text-gray-500 tracking-tight ">
+              storyboard/bg artist
+            </span>
+          </div>
+        </div>
+
+        {/* ---- LINKS ----- */}
         <nav className="w-full text-neutral-600">
           <ul className="text-[14.8px] leading-[22px] flex flex-col gap-2 mt-10 font-medium tracking-tight">
-            <li className="hover:text-red-400 hover:tracking-wide transition-all duration-300">
-              <a href="/">storyboard portfolio</a>
-            </li>
-            <li className="hover:text-red-400 hover:tracking-wide transition-all  duration-300">
-              <a href="">password</a>
-            </li>
-            <li className="hover:text-red-400 hover:tracking-wide transition-all duration-300">
-              <a href="sketchbook">backgrounds</a>
-            </li>
-            <li className="hover:text-red-400 hover:tracking-wide transition-all duration-300">
-              <a href="merch">merch art</a>
-            </li>
-            <li className="hover:text-red-400 hover:tracking-wide transition-all duration-300">
-              <a href="about">about me</a>
-            </li>
+
+            {links.map((item, index) => (
+              <li key={index} className="hover:text-red-400 hover:tracking-wide transition-all duration-300">
+                <a href={item.link}>{item.name}</a>
+              </li>
+            ))}
+
           </ul>
         </nav>
 
+        {/* --- SOCIAL MEDIA ICONS --- */}
         <div className="flex gap-3 mt-12">
+
           <div className="size-5 rounded cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +89,7 @@ function Sidebar() {
               />
             </svg>
           </div>
-          <div className="size-5 rounded">
+          <div className="size-5 rounded cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -81,7 +103,7 @@ function Sidebar() {
               />
             </svg>
           </div>
-          <div className="size-5rounded">
+          <div className="size-5 rounded cursor-pointer">
             <svg
               viewBox="0 0 256 180"
               width="20"
@@ -99,7 +121,7 @@ function Sidebar() {
               />
             </svg>
           </div>
-          <div className="size-5 rounded text-black">
+          <div className="size-5 rounded text-black cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -116,6 +138,8 @@ function Sidebar() {
             </svg>
           </div>
         </div>
+
+        {/* --- FOOTER SIDEBAR --- */}
 
         <div className="mt-auto flex flex-col text-sm font-semibold font-proxima ">
           <span>Val "Katu" Medrano - 2024 </span>
