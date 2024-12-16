@@ -20,6 +20,7 @@ interface Props {
 
 //Data
 import sidebarLinks from '@/data/sidebarLinks'
+import FadeAnimation from '@/components/animations/FadeAnimation';
 
 ---
 
@@ -52,7 +53,10 @@ import sidebarLinks from '@/data/sidebarLinks'
             <main class="w-full flex gap-6 px-4">
 
                 <!-- CONTENT -->
-			    <slot />
+			<FadeAnimation client:load>
+				<slot />
+			</FadeAnimation>
+			    
 
                 <!-- RIGHT LOGO -->
                 
