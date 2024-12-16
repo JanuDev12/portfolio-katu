@@ -15,7 +15,7 @@ function RightLogo() {
 
   return (
     <motion.div
-      className="w-[65px] h-[780px] mt-4 relative"
+      className="z-10 bg-[#f4f4f6] w-[70px] h-full fixed bottom-0 right-0 "
       initial="hidden"
       animate="show"
       variants={{
@@ -29,11 +29,11 @@ function RightLogo() {
     >
       <motion.img
         variants={FADE_DOWN_ANIMATION_VARIANTS}
-        className="w-full h-auto object-contain"
+        className="w-[65px] h-auto object-contain absolute top-5 "
         src="https://static.wixstatic.com/media/a9013c_35c12ae789e645d4a8611bd9faa22e8c~mv2.png/v1/fill/w_233,h_289,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/FIRMA%20PODEROSA.png"
         alt=""
       />
-      <div className='size-10 bg-slate-200 rounded-xl absolute bottom-0 ml-4'>
+      <div className='size-10 bg-slate-200 rounded-xl absolute bottom-5 ml-3'>
         
       </div>
     </motion.div>

@@ -6,6 +6,7 @@ import '@fontsource/geist-sans';
 // Components
 import Sidebar from '@/components/Sidebar';
 import RightLogo from '@/components/RightLogo';
+import TestingScroll from '@/components/TestingScroll'
 
 // Styles
 import '@/styles/globals.css'
@@ -21,6 +22,8 @@ interface Props {
 //Data
 import sidebarLinks from '@/data/sidebarLinks'
 import FadeAnimation from '@/components/animations/FadeAnimation';
+import { ReactLenis } from "lenis/react";
+
 
 ---
 
@@ -35,38 +38,32 @@ import FadeAnimation from '@/components/animations/FadeAnimation';
 		<title>{title}</title>
 	</head>
 	<body>
-		
-        <!-- BACKGROUND -->
-		<div class="fixed top-0 z-[-2] h-screen w-screen bg-[#f4f4f6]"></div>
+		<ReactLenis root>
 
-        <!-- WRAPPER -->
-		<div class="h-screen flex">
+			<!-- BACKGROUND -->
+		    <div class="fixed top-0 z-[-2] h-screen w-screen bg-[#f4f4f6]"></div>
 
-            <!-- SIDEBAR -->
-            <Sidebar 
-              client:idle 
-              avatar="https://pbs.twimg.com/media/GSHjbB1WAAA4BVI?format=jpg&name=large"
-              links={sidebarLinks}
-              />
-            
+			<!-- WRAPPER -->
+			<div class="h-screen w-screen relative">
 
-            <main class="w-full flex gap-6 px-4">
+				<!-- SIDEBAR LEFT-->
+				 <Sidebar 
+                 client:idle 
+                 avatar="https://pbs.twimg.com/media/GSHjbB1WAAA4BVI?format=jpg&name=large"
+                 links={sidebarLinks}
+                 />
 
-                <!-- CONTENT -->
-			<FadeAnimation client:load>
-				<slot />
-			</FadeAnimation>
-			    
+				<!-- CONTENT -->
+			  	<main class="px-4 ml-[265px] mr-[65px] relative pb-12">
+					 <slot />
 
-                <!-- RIGHT LOGO -->
-                
-                <!-- Method 1: avatar="/avatar" -->
-                <RightLogo client:idle />
-               
+					 <!-- RIGHTBAR -->
+					<RightLogo client:idle />
+				</main>
 
-		    </main>
-		
-		</div>
+			</div>
+
+		</ReactLenis>
 	</body>
 </html>
 <style is:global>

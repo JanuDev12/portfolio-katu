@@ -35,18 +35,14 @@ const Sidebar: React.FC<SidebarProps> = ({ avatar, links }) => {
         },
       }}
     >
-      <motion.aside
-        className="p-[50px] h-full w-[270px] flex flex-col"
+      <motion.header
+        className="p-[50px] h-full w-[270px] flex flex-col fixed z-10 bg-[#f4f4f6]"
         variants={FADE_DOWN_ANIMATION_VARIANTS}
       >
-        
         {/* --- AVATAR ICON --- */}
         <div>
           <Avatar className="size-[70px] ">
-            <AvatarImage
-              src={avatar}
-              alt="Katu"
-            />
+            <AvatarImage src={avatar} alt="Katu" />
             <AvatarFallback>KT</AvatarFallback>
           </Avatar>
           <div className="mt-3 flex flex-col font-proxima ">
@@ -60,21 +56,21 @@ const Sidebar: React.FC<SidebarProps> = ({ avatar, links }) => {
         </div>
 
         {/* ---- LINKS ----- */}
-        <nav className="w-full text-neutral-600">
+        <nav className="text-neutral-600">
           <ul className="text-[14.8px] leading-[22px] flex flex-col gap-2 mt-10 font-medium tracking-tight">
-
             {links.map((item, index) => (
-              <li key={index} className="hover:text-red-400 hover:tracking-wide transition-all duration-300">
+              <li
+                key={index}
+                className="hover:text-red-400 hover:tracking-wide transition-all duration-300"
+              >
                 <a href={item.link}>{item.name}</a>
               </li>
             ))}
-
           </ul>
         </nav>
 
         {/* --- SOCIAL MEDIA ICONS --- */}
         <div className="flex gap-3 mt-12">
-
           <div className="size-5 rounded cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -145,7 +141,7 @@ const Sidebar: React.FC<SidebarProps> = ({ avatar, links }) => {
           <span>Val "Katu" Medrano - 2024 </span>
           <span className="text-xs">Created for [me]</span>
         </div>
-      </motion.aside>
+      </motion.header>
     </motion.div>
   );
 }

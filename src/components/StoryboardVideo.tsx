@@ -10,7 +10,7 @@ function StoryboardVideo() {
 
   return (
     <motion.div
-      className="mt-48 mb-28 w-full "
+      className="mt-48  w-full "
       initial="hidden"
       animate="show"
       viewport={{ once: true }}
