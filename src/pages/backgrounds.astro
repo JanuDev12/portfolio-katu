@@ -1,6 +1,18 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import backgrounds from "@/data/backgrounds";
+
+
+
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/Dialog"
+import ImageDialog from "@/components/imageDialog";
 ---
 
 <Layout title="Welcome to Katu!.">
@@ -8,11 +20,8 @@ import backgrounds from "@/data/backgrounds";
         <p class="text-sm tracking-wider mb-3 font-medium">Also i make backgrounds!!</p>
         
         <div class="grid grid-cols-2 gap-2">
-
             {backgrounds.map(image => (
-                <div class="h-full w-full">
-                    <img class="w-full h-full object-cover" src={image.src} alt={image.id.toString()} />
-                </div>
+                <ImageDialog client:load img={image.src} imgID={image.id} className="max-w-[80%]"></ImageDialog>
             ))}
             
         </div>

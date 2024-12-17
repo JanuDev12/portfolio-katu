@@ -5,6 +5,9 @@ import { useEffect, useRef } from "react";
 import { animate, scroll, spring } from "motion";
 import { ReactLenis } from "lenis/react";
 
+import ImageDialog from "@/components/imageDialog";
+
+
 export default function HorizontalScroll(): JSX.Element {
   const ulRef = useRef<HTMLUListElement | null>();
 
@@ -58,10 +61,7 @@ export default function HorizontalScroll(): JSX.Element {
 
               <div class="flex flex-wrap gap-2 mt-4">
                 <div class="w-[165px] h-auto">
-                  <img
-                    src="https://static.wixstatic.com/media/a9013c_139f540942244b4baef09a4ae040f49f~mv2.png/v1/crop/x_5,y_0,w_2649,h_1800/fill/w_1198,h_814,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/a9013c_139f540942244b4baef09a4ae040f49f~mv2.png"
-                    alt=""
-                  />
+                  <imageDialog src="https://static.wixstatic.com/media/a9013c_139f540942244b4baef09a4ae040f49f~mv2.png/v1/crop/x_5,y_0,w_2649,h_1800/fill/w_1198,h_814,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/a9013c_139f540942244b4baef09a4ae040f49f~mv2.png" />
                 </div>
                 <div class="w-[165px] h-auto">
                   <img
