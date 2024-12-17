@@ -38,7 +38,7 @@ export default function HorizontalScroll(): JSX.Element {
 
   return (
     <>
-      <div className="relative h-[300vh] wrapper-section">
+      <div className="relative h-[250vh] wrapper-section">
         <ul ref={ulRef} className="flex gap-96 sticky top-44 wrapper-scroll">
           {/* ARTICLE */}
           <li className="flex gap-4 h-full min-w-full items-center items-scroll">
@@ -92,7 +92,7 @@ export default function HorizontalScroll(): JSX.Element {
                 </div>
               </div>
             </div>
-            <div class="h-[400px]">
+            <div class="h-[300px]">
               <div class="w-[600px] h-full ">
                 <img
                   src="https://static.wixstatic.com/media/a9013c_b9060ba4e405472288aa20acae06a838~mv2.png/v1/fill/w_479,h_241,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_b9060ba4e405472288aa20acae06a838~mv2.png"
