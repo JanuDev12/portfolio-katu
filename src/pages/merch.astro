@@ -33,13 +33,13 @@ import { Pointer } from "@/components/ui/CursorTooltip"
             <!-- BANNER -->
             
             
-                <div class="w-[660px] h-40 flex items-center justify-center   border-2 border-neutral-200 rounded-lg ">
-                    <Pointer client:load name="Hola Katu, si estas leyendo esto aqui iria un banner, esto es de ejemplo" className={'absolute flex h-52 w-[730px] items-end justify-center font-proxima text-sm tracking-wide font-normal'}>
-                    </Pointer>
+            <div class="w-[660px] h-40 flex items-center justify-center   border-2 border-neutral-200 rounded-lg ">
+                 <Pointer client:load name="Hola Katu >.< ,  si estas leyendo esto aqui iria un banner, esto es de ejemplo" className={'absolute flex h-52 w-[730px] items-end justify-center font-proxima text-sm tracking-wide font-normal'}>
+                 </Pointer>
                     <span class="bg-clip-text text-transparent bg-gradient-to-b from-amber-500 to-amber-800 font-chelsea uppercase text-5xl tracking-widest font-medium">
                             El <span class="bg-clip-text text-transparent bg-gradient-to-b from-yellow-500 to-yellow-700">ramen</span> de <span class="bg-clip-text text-transparent bg-gradient-to-b from-yellow-500 to-yellow-700">Katu</span>
                     </span> 
-                </div>
+             </div>
           
                  
             
@@ -49,7 +49,7 @@ import { Pointer } from "@/components/ui/CursorTooltip"
 
         <div class="mt-8">
             <h3 class="text-2xl font-bold mb-2 font-proxima uppercase">Prints</h3>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <!-- <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {merchPrints.map(print => ( 
                     <ImageDialog client:load img={print.src} imgID={print.id} className="max-w-[30%]">
                         
@@ -58,6 +58,26 @@ import { Pointer } from "@/components/ui/CursorTooltip"
                         <img class="" src={print.src} alt={print.id.toString()} />
                     </div> */
                 ))}
+            </div> -->
+            <div class="flex gap-2 mb-2">
+                <ImageDialog client:load img="https://static.wixstatic.com/media/a9013c_9ef9864845b84a98b73877c732452853~mv2.png/v1/fill/w_505,h_725,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_9ef9864845b84a98b73877c732452853~mv2.png" imgID={1} className="max-w-[30%]" />
+                 <ImageDialog client:load img="https://static.wixstatic.com/media/a9013c_43a007b96d714f099a559738cd08e887~mv2.png/v1/fill/w_509,h_725,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_43a007b96d714f099a559738cd08e887~mv2.png" imgID={2} className="max-w-[30%]" />
+                  <ImageDialog client:load img="https://static.wixstatic.com/media/a9013c_558db9e5e854471aa0cf85903279d1b5~mv2.png/v1/fill/w_511,h_725,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_558db9e5e854471aa0cf85903279d1b5~mv2.png" imgID={3} className="max-w-[30%]" />
+            </div>
+            <div class="flex gap-2 mb-2">
+                <ImageDialog client:load img="https://static.wixstatic.com/media/a9013c_21dbaac9fdab46d0bcd0f719779715a3~mv2.png/v1/fill/w_750,h_515,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_21dbaac9fdab46d0bcd0f719779715a3~mv2.png" imgID={4} className="max-w-[50%]" />
+                 <ImageDialog client:load img="https://static.wixstatic.com/media/a9013c_4cd248e86382414187c5c60c4e2fa8d6~mv2.png/v1/fill/w_771,h_515,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_4cd248e86382414187c5c60c4e2fa8d6~mv2.png" imgID={5} className="max-w-[50%]"/>
+            </div>
+            <div class="flex gap-2 mb-2">
+                 <ImageDialog client:load img="https://static.wixstatic.com/media/a9013c_2f71c9b1775a4ae5bd0905d2e3332512~mv2.png/v1/fill/w_486,h_725,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_2f71c9b1775a4ae5bd0905d2e3332512~mv2.png" imgID={1} className="max-w-[30%]" />
+                 <ImageDialog client:load img="https://static.wixstatic.com/media/a9013c_27c4c1e1c5b14723b89ec3616a564d83~mv2.png/v1/fill/w_509,h_725,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_27c4c1e1c5b14723b89ec3616a564d83~mv2.png" imgID={2} className="max-w-[30%]" />
+                  <ImageDialog client:load img="https://static.wixstatic.com/media/a9013c_92ae1380e8f546b38594acecfab3a8d3~mv2.png/v1/fill/w_526,h_725,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_92ae1380e8f546b38594acecfab3a8d3~mv2.png" imgID={3} className="max-w-[30%]" />
+            </div>
+            <div class="flex gap-2">
+                 <ImageDialog client:load img="https://static.wixstatic.com/media/a9013c_ee90a11f1a76421d8eed5809dd902678~mv2.png/v1/fill/w_486,h_750,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_ee90a11f1a76421d8eed5809dd902678~mv2.png" imgID={1} className="max-w-[30%]" />
+                 <ImageDialog client:load img="https://static.wixstatic.com/media/a9013c_3fe0f49f58ac4b759ae4016047d5fd33~mv2.png/v1/fill/w_526,h_750,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_3fe0f49f58ac4b759ae4016047d5fd33~mv2.png" imgID={2} className="max-w-[30%]" />
+                  <ImageDialog client:load img="https://static.wixstatic.com/media/a9013c_c9c6616742cd461e968093f82d1696e8~mv2.png/v1/fill/w_509,h_750,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_c9c6616742cd461e968093f82d1696e8~mv2.png" imgID={3} className="max-w-[30%]" />
+            
             </div>
        </div>
 
@@ -71,15 +91,20 @@ import { Pointer } from "@/components/ui/CursorTooltip"
 
        <div>
          <h3 class="text-2xl font-bold mt-6 mb-4 font-proxima uppercase">T-shirts & notebooks</h3>
-         <div>
+         <div class="flex justify-center">
             <img src="https://static.wixstatic.com/media/a9013c_08cfc9079a57495eaa42e96b9f225598~mv2.jpeg/v1/fill/w_943,h_713,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_08cfc9079a57495eaa42e96b9f225598~mv2.jpeg" alt="">
+         </div>
+          <div class="flex gap-2 mt-2 justify-center">
+            <img src="https://static.wixstatic.com/media/a9013c_6958906297b24ec9978811786d4a1c13~mv2.jpeg/v1/fill/w_534,h_713,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_6958906297b24ec9978811786d4a1c13~mv2.jpeg" alt="">
+            <img src="https://static.wixstatic.com/media/a9013c_38bd476486404eeaa048537a39fe849a~mv2.jpeg/v1/fill/w_456,h_713,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_38bd476486404eeaa048537a39fe849a~mv2.jpeg" alt="">
          </div>
        </div>
 
        <div>
          <h3 class="text-2xl font-bold mt-6 mb-4 font-proxima uppercase">The stand</h3>
-         <div>
-             <img src="https://static.wixstatic.com/media/a9013c_d358e86f247541c8bc9dcde59e3fdbe2~mv2.jpeg/v1/fill/w_696,h_588,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_d358e86f247541c8bc9dcde59e3fdbe2~mv2.jpeg" alt="">
+         <div class="flex gap-2 justify-center">
+             <img src="https://static.wixstatic.com/media/a9013c_d358e86f247541c8bc9dcde59e3fdbe2~mv2.jpeg/v1/fill/w_696,h_588,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_d358e86f247541c8bc9dcde59e3fdbe2~mv2.jpeg" alt="" class="size-[50%]">
+             <img src="https://static.wixstatic.com/media/a9013c_88f4b47cace843e1aaf97f77827925c3~mv2.jpeg/v1/fill/w_489,h_650,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_88f4b47cace843e1aaf97f77827925c3~mv2.jpeg" alt="">
          </div>
        </div>
         
