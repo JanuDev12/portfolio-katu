@@ -7,6 +7,7 @@ export default {
       onest: ['"Onest Variable"', "sans-serif"],
       geist: ['"Geist Sans"', "sans-serif"],
       proxima: ['"Proxima Nova"', "sans-serif"],
+      chelsea: ['"Chelsea Market"', "system-ui"]
     },
     extend: {
       borderRadius: {
@@ -57,6 +58,11 @@ export default {
         },
       },
       keyframes: {
+        gradient: {
+          to: {
+            backgroundPosition: "var(--bg-size) 0",
+          },
+        },
         "accordion-down": {
           from: {
             height: "0",
@@ -75,6 +81,7 @@ export default {
         },
       },
       animation: {
+        gradient: "gradient 8s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
