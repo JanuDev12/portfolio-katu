@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import merchPrints from "@/data/merch";
 import ImageDialog from "@/components/imageDialog";
+import { Pointer } from "@/components/ui/CursorTooltip"
 ---
 
 <Layout title="Welcome to Katu!.">
@@ -31,12 +32,15 @@ import ImageDialog from "@/components/imageDialog";
 
             <!-- BANNER -->
             
-            <div class="w-[660px] h-40 flex items-center justify-center font-chelsea uppercase text-5xl tracking-widest font-medium border-2 border-neutral-200 rounded-lg ">
-                <span class="bg-clip-text text-transparent bg-gradient-to-b from-amber-500 to-amber-800">
-                        El <span class="bg-clip-text text-transparent bg-gradient-to-b from-yellow-500 to-yellow-700">ramen</span> de <span class="bg-clip-text text-transparent bg-gradient-to-b from-yellow-500 to-yellow-700">Katu</span>
-                </span>
-                    
-            </div>
+            
+                <div class="w-[660px] h-40 flex items-center justify-center   border-2 border-neutral-200 rounded-lg ">
+                    <Pointer client:load name="Hola Katu, si estas leyendo esto aqui iria un banner, esto es de ejemplo" className={'absolute flex h-52 w-[730px] items-end justify-center font-proxima text-sm tracking-wide font-normal'}>
+                    </Pointer>
+                    <span class="bg-clip-text text-transparent bg-gradient-to-b from-amber-500 to-amber-800 font-chelsea uppercase text-5xl tracking-widest font-medium">
+                            El <span class="bg-clip-text text-transparent bg-gradient-to-b from-yellow-500 to-yellow-700">ramen</span> de <span class="bg-clip-text text-transparent bg-gradient-to-b from-yellow-500 to-yellow-700">Katu</span>
+                    </span> 
+                </div>
+          
                  
             
 
