@@ -1,14 +1,15 @@
 ---
+import { Spotlight } from '@/components/ui/Spotlight';
 import Layout from '@layouts/Layout.astro';
 ---
 <Layout title="Welcome to Katu!">   
-    <section class="w-full h-full flex flex-col pt-8 ">
+    <section class="relative flex flex-col pt-8 ">
         <h3 class="text-xl font-semibold uppercase tracking-wide font-proxima ">About me</h3>
 		<div class="w-[9.5%] h-[2px] bg-red-500 rounded"></div>
 
-        <div class="flex mt-6">
-            <div class="w-full flex flex-col gap-3">
-                <div class="rounded-lg w-full h-[590px]">
+        <div class="lg:flex lg:gap-4 md:mt-6 mt-4 relative">
+            <div class="w-full flex flex-col md:gap-3 gap-6">
+                <div class="rounded-lg w-full xl:[590px]  lg:w-[220px] sm:h-[460px] sm:px-16 min-[400px]:h-[340px] h-[290px] sm:mb-3 lg:px-0">
                     <img src="https://static.wixstatic.com/media/a9013c_f3b4944e5ecb4e48a05ca32d95c720f9~mv2.jpeg/v1/fill/w_474,h_838,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_f3b4944e5ecb4e48a05ca32d95c720f9~mv2.jpeg" class="rounded-lg h-full w-full object-cover ">
                 </div>
                 <div class="flex gap-2">
@@ -22,25 +23,17 @@ import Layout from '@layouts/Layout.astro';
                 </div>
 
             </div>
-            <div class=" px-8">
-                <h3 class="text-3xl font-semibold tracking-wide font-proxima">Hola! I'm Val "Katu" Medrano</h3>
+            
+            <div class=" relative">
+                <h3 class="md:text-3xl text-xl font-semibold tracking-wide font-proxima mb-2">Hola! I'm Val "Katu" Medrano</h3>
                 <!-- <span class="text-xl text-neutral-600 font-proxima tracking-tight font-semibold">Storyboard Artist
                 </span> -->
                 <div class="flex flex-col gap-6 text-sm">
-                    <p class="tracking-wide font"> Everyone knows me more as Katu. I am a Mexican student of 3D production for cinema specialized in the area of ​​drawing. More specific: Character Design, Background Art, Storyboard and Concept Art. I'm very passionate about these areas and that's why I have practiced all. I'm always happy to help people so that their projects can be visualized as they envision. </p>
+                    <p class="tracking-wide "> Everyone knows me more as Katu. I am a Mexican student of 3D production for cinema specialized in the area of ​​drawing. More specific: Character Design, Background Art, Storyboard and Concept Art. I'm very passionate about these areas and that's why I have practiced all. I'm always happy to help people so that their projects can be visualized as they envision. </p>
                     <p class="tracking-wide">As an extra information I like D&D (both as a player and DM), I like role-playing videogames a lot and animated movies are my favorite.</p>
                 </div>
-                <div class="flex flex-col">
-                    <h3 class="text-2xl font-semibold mt-8 font-proxima">Contactame!</h3>
-                    <p class="tracking-wide text-sm">¡Siempre estoy en búsqueda de nuevas oportunidades! ¡No temas en enviarme un mensaje! Vamos a conectarnos.</p>
-                    <div class="flex font-proxima font-semibold gap-6 mt-5">
-                        <span>workatukint@outlook.com</span>
-                        <span>grimgray9@gmail.com</span>
-                        <span>Discord: @katukint</span>
-                    </div>
-                </div>
-
                 <div>
+                    
                     <h3 class="text-2xl font-semibold mt-12 font-proxima">Clients</h3>
                     <div class="flex gap-3 items-center">
                         <div class="size-48">
@@ -52,7 +45,19 @@ import Layout from '@layouts/Layout.astro';
 
                     </div>
                 </div>
+                <div class="flex flex-col xl:-left-0 xl:top-0 lg:relative lg:-left-60 lg:-top-10 lg:w-[600px]">
+                    <h3 class="text-2xl font-semibold mt-8 mb-2 ">Contactame!</h3>
+                    <p class="tracking-wide text-sm">¡Siempre estoy en búsqueda de nuevas oportunidades! ¡No temas en enviarme un mensaje! Vamos a conectarnos.</p>
+                    <div class="flex flex-col md:flex-row font-proxima font-semibold md:gap-6 gap-3 mt-5">
+                        <span>workatukint@outlook.com</span>
+                        <span>grimgray9@gmail.com</span>
+                        <span>Discord: @katukint</span>
+                    </div>
+                </div>
+
+                
             </div>
+            
         </div>
    </section>
 

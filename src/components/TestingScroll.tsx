@@ -6,6 +6,7 @@ import { animate, scroll, spring } from "motion";
 import { ReactLenis } from "lenis/react";
 
 import ImageDialog from "@/components/imageDialog";
+import StoryboardVideo from "./StoryboardVideo";
 
 
 export default function HorizontalScroll(): JSX.Element {
@@ -44,22 +45,17 @@ export default function HorizontalScroll(): JSX.Element {
       <div className="relative h-[250vh] wrapper-section">
         <ul ref={ulRef} className="flex gap-96 sticky top-44 wrapper-scroll">
           {/* ARTICLE */}
-          <li className="flex gap-4 h-full min-w-full items-center items-scroll">
-            <div className="flex flex-col gap-1">
-              <div>
-                <h4 className="text-4xl font-semibold font-proxima tracking-wide">
+          <li className="flex  gap-4 h-full min-w-full items-center items-scroll">
+            <div className="flex flex-col gap-1 w-full">
+              <div className="flex flex-col gap-1">
+                <h4 className="text-lg font-semibold font-proxima tracking-wide text-center">
                   Stranger
-                  <span className="text-xl text-red-600"> (Thriller)</span>
+                  <span className="text-sm text-red-600"> (Thriller)</span>
                 </h4>
-                <p className="tracking-wide">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Impedit deserunt praesentium atque consectetur, quis ipsa qui
-                  accusantium totam temporibus mollitia tempore amet
-                  necessitatibus nemo nihil quisquam maiores fuga est facilis.
-                </p>
               </div>
+              <StoryboardVideo></StoryboardVideo>
 
-              <div class="flex flex-wrap gap-2 mt-4">
+              {/* <div class="flex flex-wrap gap-2 mt-4">
                 <div class="w-[165px] h-auto">
                   <imageDialog src="https://static.wixstatic.com/media/a9013c_139f540942244b4baef09a4ae040f49f~mv2.png/v1/crop/x_5,y_0,w_2649,h_1800/fill/w_1198,h_814,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/a9013c_139f540942244b4baef09a4ae040f49f~mv2.png" />
                 </div>
@@ -90,9 +86,9 @@ export default function HorizontalScroll(): JSX.Element {
                     alt=""
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
-            <div class="h-[300px]">
+            {/* <div class="h-[300px]">
               <div class="w-[600px] h-full ">
                 <img
                   src="https://static.wixstatic.com/media/a9013c_b9060ba4e405472288aa20acae06a838~mv2.png/v1/fill/w_479,h_241,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_b9060ba4e405472288aa20acae06a838~mv2.png"
@@ -100,7 +96,7 @@ export default function HorizontalScroll(): JSX.Element {
                   alt=""
                 />
               </div>
-            </div>
+            </div> */}
           </li>
           <li className="flex gap-4 h-full min-w-full items-center items-scroll">
             <div className="flex flex-col gap-1">

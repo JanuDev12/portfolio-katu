@@ -4,19 +4,21 @@ import StoryboardVideo from '@/components/StoryboardVideo';
 import { Sparkles } from '@/components/ui/sparkles';
 import HorizontalScroll from '@/components/horizontalScroll';
 import TestingScroll from '@/components/TestingScroll'
+import { Spotlight } from "@/components/ui/Spotlight"
 
 ---
 <Layout title='Welcome to Katu'>
 	<section class="w-full h-full flex flex-col justify-between pt-8 relative">
-		<div class="flex flex-col relative mb-[160px]">
+		<div class="flex flex-col relative mb-6 ">
+		
 				<h3 class="text-xl font-semibold uppercase tracking-wide font-proxima">Personal Storyboards</h3>
 				<div class="w-[23%] h-[2px] bg-red-500 rounded"></div>
 	
-				<div class="font-proxima font-semibold leading-loose mt-12 flex flex-col mx-auto text-center">
-					<span class="text-xl">Here are some of my personal Storyboards, </span>
-					<span >
-						some of them are exercises from college, ando others like Stranger are personal projects.
-					</span>
+				<div class="font-proxima font-semibold leading-loose mt-5 flex max-h-36 w-full">
+					<!-- <div class="flex flex-col w-full h-full text-center">
+						<span class="text-xl">Here are some of my personal storyboards</span>
+						<span>some of them are exercises from college, ando others like Stranger are personal projects.</span>
+					</div> -->
 				</div>	
 		</div>
 
@@ -53,7 +55,53 @@ import TestingScroll from '@/components/TestingScroll'
 				</div>
 			</div>
 		</article> -->
-		<TestingScroll client:idle></TestingScroll>
+		<!-- <TestingScroll client:idle></TestingScroll> -->
+		 <!-- <article class="flex flex-col gap-8">
+			<StoryboardVideo client:load></StoryboardVideo>
+			<div class="text-center">
+				<h4 class="text-xl font-semibold font-proxima tracking-wide text-center">
+                  Stranger
+                  <span class="text-lg text-red-600"> (Pilot)</span>
+                </h4>
+				<div class="flex flex-wrap gap-4 w-full mt-8">
+					<div class="h-full w-[560px]"><img src="https://static.wixstatic.com/media/a9013c_139f540942244b4baef09a4ae040f49f~mv2.png/v1/crop/x_5,y_0,w_2649,h_1800/fill/w_705,h_479,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_139f540942244b4baef09a4ae040f49f~mv2.png" alt="" class="w-full h-full object-contain"></div>
+					<div class="h-full w-[560px]">
+					 <img src="https://static.wixstatic.com/media/a9013c_17bb052dcc2a4a808413ad28126cd0e7~mv2.png/v1/fill/w_705,h_479,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_17bb052dcc2a4a808413ad28126cd0e7~mv2.png" alt="" class="w-full h-full object-contain">
+					</div>
+					<div class="h-full w-[560px]"><img src="https://static.wixstatic.com/media/a9013c_58ff36a31e874a4e86bb346f25713279~mv2.png/v1/fill/w_705,h_479,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_58ff36a31e874a4e86bb346f25713279~mv2.png" alt="" class="w-full h-full object-contain"></div>
+					<div class="h-full w-[560px]"><img src="https://static.wixstatic.com/media/a9013c_78c6d43dc96f433888e4f90c364e9e12~mv2.png/v1/fill/w_705,h_479,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_78c6d43dc96f433888e4f90c364e9e12~mv2.png" alt="" class="w-full h-full object-contain"></div>
+					<div class="h-full w-[560px]"><img src="https://static.wixstatic.com/media/a9013c_3267fc63171f4d6eac5a5c9b645def24~mv2.jpg/v1/fill/w_845,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/stranger_storyboard_1%20(2)_P%C3%A1gina_5_edite.jpg" alt="" class="w-full h-full object-contain"></div>
+				</div>
+			</div>
+		 </article>
+		 <article class="flex flex-col gap-8 mt-8">
+			<div class="w-full  relative z-10">
+				<h4 class="text-xl font-semibold uppercase tracking-wide font-proxima text-center">
+                TROLLS ROUGH
+                </h4>
+                <div class="w-[15%] h-[2px] bg-red-500 rounded mb-4 mx-auto"></div>
+
+				<video src="https://video.wixstatic.com/video/a9013c_1b88e44f99d849098d14dde9d060db26/480p/mp4/file.mp4" class="w-full h-full  border-[2px] rounded-md shadow-lg "></video>
+			
+			</div>
+		 </article>
+		 <article class="mt-8">
+			<div class="text-center">
+				<h4 class="text-xl font-semibold font-proxima tracking-wide text-center">
+                  Karma
+                  <span class="text-lg text-red-600"> (horror)</span>
+                </h4>
+				<div class="flex flex-wrap gap-4 w-full mt-8">
+					<div class="h-full w-[560px]"><img src="https://static.wixstatic.com/media/a9013c_48971a3c9bec4c8f995f62922c074ac0~mv2.png/v1/fill/w_750,h_421,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_48971a3c9bec4c8f995f62922c074ac0~mv2.png" alt="" class="w-full h-full object-contain"></div>
+					<div class="h-full w-[560px]">
+					 <img src="https://static.wixstatic.com/media/a9013c_53ba270079ad4eeb844657fc5f9cfdf7~mv2.png/v1/fill/w_750,h_421,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_53ba270079ad4eeb844657fc5f9cfdf7~mv2.png" alt="" class="w-full h-full object-contain">
+					</div>
+					<div class="h-full w-[560px]"><img src="https://static.wixstatic.com/media/a9013c_7ca50a5bda1e4915b2cb444c0d8ce93d~mv2.png/v1/fill/w_750,h_421,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_7ca50a5bda1e4915b2cb444c0d8ce93d~mv2.png" alt="" class="w-full h-full object-contain"></div>
+					<div class="h-full w-[560px]"><img src="https://static.wixstatic.com/media/a9013c_33477e9a3c9a4d1e9632a21b21d038ae~mv2.png/v1/fill/w_750,h_421,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9013c_33477e9a3c9a4d1e9632a21b21d038ae~mv2.png" alt="" class="w-full h-full object-contain"></div>
+					
+				</div>
+			</div>
+		 </article> -->
 	</section>
 
 	<!-- <div class="w-full h-full flex flex-col justify-between pt-8">
@@ -75,8 +123,7 @@ import TestingScroll from '@/components/TestingScroll'
 		 -->
 
 		
-		<StoryboardVideo client:load />
-	</div>
+<!-- 		<StoryboardVideo client:load /> -->	</div>
 
 <!-- 	<HorizontalScroll client:load ></HorizontalScroll>
  -->	

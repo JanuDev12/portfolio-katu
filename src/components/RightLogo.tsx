@@ -15,7 +15,7 @@ function RightLogo() {
 
   return (
     <motion.div
-      className="z-10 bg-[#f4f4f6] w-[70px] h-full fixed bottom-0 right-0 "
+      className="z-10 w-[70px] h-full fixed bottom-0 right-0 hidden lg:block"
       initial="hidden"
       animate="show"
       variants={{

@@ -24,6 +24,7 @@ interface Props {
 import sidebarLinks from '@/data/sidebarLinks'
 import FadeAnimation from '@/components/animations/FadeAnimation';
 import { ReactLenis } from "lenis/react";
+import { Spotlight } from '@/components/ui/Spotlight';
 
 
 ---
@@ -42,8 +43,17 @@ import { ReactLenis } from "lenis/react";
 		<ReactLenis root>
 
 			<!-- BACKGROUND -->
-		    <div class="fixed top-0 z-[-2] h-screen w-screen bg-[#f4f4f6]"></div>
-
+		    <div class="fixed inset-0 -z-10 h-screen w-screen bg-[#f4f4f6]"></div>
+			<!-- <Spotlight
+				client:load
+                className="left-20 top-0 w-[1800px] h-[1800px] opacity-100 fixed"
+                fill=" #991b1b"
+            /> -->
+			 <!-- <div
+  class="fixed inset-0 h-full w-full bg-[#f4f4f6] bg-[radial-gradient(#bbbbbb_1px,transparent_1px)] [background-size:20px_20px]"
+></div> -->
+<!-- <div class="fixed h-full w-full bg-[#f4f4f6]"><div class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div><div class="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div></div> -->
+ 
 			<!-- WRAPPER -->
 			<div class="h-screen w-screen relative">
 
@@ -55,7 +65,7 @@ import { ReactLenis } from "lenis/react";
                  />
 
 				<!-- CONTENT -->
-			  	<main class="px-6 ml-[270px] mr-[65px] relative pb-12">
+			  	<main class="lg:px-6 px-4 lg:ml-[240px] xl:ml-[270px] lg:mr-[45px] xl:mr-[65px] relative pb-12 ">
 					 <slot />
 
 					 <!-- RIGHTBAR -->

@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
+import { Button } from "./ui/button";
+import { SidebarCloseIcon, SidebarIcon } from "lucide-react";
 
 interface LinkItem {
   link: string;
@@ -24,7 +26,7 @@ const Sidebar: React.FC<SidebarProps> = ({ avatar, links }) => {
 
   return (
     <motion.div
-      initial="hidden"
+      initial="hidden relative"
       animate="show"
       variants={{
         hidden: {},
@@ -36,27 +38,27 @@ const Sidebar: React.FC<SidebarProps> = ({ avatar, links }) => {
       }}
     >
       <motion.header
-        className="p-[50px] h-full w-[270px] flex flex-col fixed z-10 bg-[#f4f4f6]"
+        className="lg:p-[40px] xl-[50px] p-4 lg:h-full h-[125px] w-full  lg:w-[270px] flex lg:flex-col lg:fixed z-10 relative "
         variants={FADE_DOWN_ANIMATION_VARIANTS}
       >
         {/* --- AVATAR ICON --- */}
-        <div>
-          <Avatar className="size-[70px] ">
+        <div className="w-full ">
+          <Avatar className="lg:size-[70px] size-[50px] ">
             <AvatarImage src={avatar} alt="Katu" />
             <AvatarFallback>KT</AvatarFallback>
           </Avatar>
-          <div className="mt-3 flex flex-col font-proxima ">
-            <span className="text-2xl font-semibold text-black tracking-wide">
+          <div className="lg:mt-3 mt-1 flex flex-col font-proxima ">
+            <span className="text-lg lg:text-2xl font-semibold text-black tracking-wide">
               Katu
             </span>
-            <span className="text-sm font-semibold text-gray-500 tracking-tight ">
+            <span className="text-xs lg:text-sm font-semibold text-gray-500 tracking-tight ">
               storyboard/bg artist
             </span>
           </div>
         </div>
 
         {/* ---- LINKS ----- */}
-        <nav className="text-neutral-600">
+        <nav className="text-neutral-600 hidden lg:block">
           <ul className="text-[14.8px] leading-[22px] flex flex-col gap-2 mt-10 font-medium tracking-tight">
             {links.map((item, index) => (
               <li
@@ -70,8 +72,8 @@ const Sidebar: React.FC<SidebarProps> = ({ avatar, links }) => {
         </nav>
 
         {/* --- SOCIAL MEDIA ICONS --- */}
-        <div className="flex gap-3 mt-12">
-          <div className="size-5 rounded cursor-pointer">
+        <div className="flex gap-3 lg:mt-12">
+          <div className="md:size-5 rounded cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -137,9 +139,14 @@ const Sidebar: React.FC<SidebarProps> = ({ avatar, links }) => {
 
         {/* --- FOOTER SIDEBAR --- */}
 
-        <div className="mt-auto flex flex-col text-sm font-semibold font-proxima ">
+        <div className="mt-auto justify-end lg:flex flex-col text-sm font-semibold font-proxima hidden">
           <span>Val "Katu" Medrano - 2024 </span>
           <span className="text-xs">Created for [me]</span>
+        </div>
+
+        {/* BUTTON MENU */}
+        <div>
+          <Button variant="outline" className="absolute font-proxima font-bold text-lg tracking-wider bottom-3 right-8 bg-black text-white lg:hidden">Menu </Button>
         </div>
       </motion.header>
     </motion.div>
